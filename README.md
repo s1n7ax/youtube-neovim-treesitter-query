@@ -1,3 +1,9 @@
+# Youtube Neovim Treesitter Query
+ 
+This is a presentation created for Youtube video tutorial on Treesitter Query
+
+[Click here to watch the video](https://youtu.be/86sgKa0jeO4)
+
 # Neovim Treesitter Query
 
 * Neovim Treesitter Playground
@@ -33,7 +39,7 @@ use {
 ```lua
 local language_tree = vim.treesitter.get_parser(<bufnr>)
 ```
-* Get build syntax tree
+* Build syntax tree
 ```lua
 local syntax_tree = language_tree:parse()
 ```
@@ -108,6 +114,6 @@ local query = vim.treesitter.parse_query('java', [[
 ]])
 
 for id, match, metadata in query:iter_matches(root, <bufnr>, root:start(), root:end_()) do
-    vim.inspect(metadata)
+    print(vim.inspect(metadata))
 end
 ```
